@@ -1,16 +1,20 @@
-@if index($btn-types, danger) {
+@use '../btn-variables' as *;
+@use 'sass:list';
+@use 'sass:color';
+
+@if list.index($btn-types, danger) {
   /* == Danger == */
   .btn--danger {
     background-color: #fc5a5a;
 
     &:active {
-      background-color: darken(#fc5a5a, 10%);
+      background-color: color.adjust(#fc5a5a, $lightness: -10%);
     }
 
     @media (hover: hover) {
       &:hover,
       &:focus {
-        background-color: lighten(#fc5a5a, 10%);
+        background-color: color.adjust(#fc5a5a, $lightness: 10%);
       }
     }
 

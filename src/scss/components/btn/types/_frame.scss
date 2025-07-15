@@ -1,4 +1,7 @@
-@if index($btn-types, frame) {
+@use '../btn-variables' as *;
+@use 'sass:list';
+
+@if list.index($btn-types, frame) {
   /* ==Frame == */
   .btn--frame {
     border-color: #f07f2e;

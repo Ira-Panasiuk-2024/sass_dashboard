@@ -17,6 +17,7 @@ $reports-status: (
   min-width: 340px;
   background-color: fn.get-color('dark-tertiary');
 }
+
 .reports-title {
   @extend %details;
 
@@ -28,6 +29,7 @@ $reports-status: (
     color: fn.get-color('light-primary');
   }
 }
+
 .reports-item {
   display: flex;
   align-items: center;
@@ -41,23 +43,28 @@ $reports-status: (
     margin-bottom: 28px;
   }
 }
+
 .reports-staff {
   flex-grow: 1;
   flex-shrink: 0;
 }
+
 .staff {
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .staff-thumb {
   @include mx.frame(32px, $is-circle: true);
 }
+
 .staff-caption {
   @extend %details;
 
   color: fn.get-color('light-secondary');
 }
+
 .reports-bar {
   width: calc(100% - 224px);
   height: 4px;

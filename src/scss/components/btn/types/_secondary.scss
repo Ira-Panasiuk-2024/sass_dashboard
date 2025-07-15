@@ -1,4 +1,7 @@
-@if index($btn-types, secondary) {
+@use '../btn-variables' as *;
+@use 'sass:list';
+
+@if list.index($btn-types, secondary) {
   /* == Secondary == */
   .btn--secondary {
     &:active {

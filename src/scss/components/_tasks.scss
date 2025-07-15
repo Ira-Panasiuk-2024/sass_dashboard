@@ -13,6 +13,7 @@
 
   background-color: fn.get-color('dark-tertiary');
 }
+
 .tasks-title {
   @extend %details;
 
@@ -24,6 +25,7 @@
     color: fn.get-color('light-primary');
   }
 }
+
 .tasks-list {
   @include mx.scroll-bar;
 
@@ -34,6 +36,7 @@
     margin-right: -14px;
   }
 }
+
 .tasks-item {
   display: flex;
   align-items: center;
@@ -43,6 +46,7 @@
   border-top: 1px solid;
   border-color: fn.get-color('light-tertiary');
 }
+
 .tasks-checkbox {
   flex-shrink: 0;
 
@@ -54,6 +58,7 @@
   height: 20px;
   cursor: pointer;
 }
+
 .tasks-checkbox-icon {
   @include mx.ease('fast', fill, background-color, border-color);
 
@@ -74,19 +79,23 @@
     outline-offset: 2px;
   }
 }
+
 .tasks-info {
   flex-grow: 1;
 }
+
 .tasks-heading {
   @extend %details;
 
   color: fn.get-color('light-primary');
 }
+
 .tasks-desc {
   @extend %details;
 
   color: fn.get-color('light-secondary');
 }
+
 .tasks-btn {
   @include mx.ease('fast', outline);
 

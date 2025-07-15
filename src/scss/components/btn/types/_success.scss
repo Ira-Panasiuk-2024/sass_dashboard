@@ -1,16 +1,20 @@
-@if index($btn-types, success) {
+@use '../btn-variables' as *;
+@use 'sass:list';
+@use 'sass:color';
+
+@if list.index($btn-types, success) {
   /* == Success == */
   .btn--success {
     background-color: #82c43c;
 
     &:active {
-      background-color: darken(#82c43c, 10%);
+      background-color: color.adjust(#82c43c, $lightness: -10%);
     }
 
     @media (hover: hover) {
       &:hover,
       &:focus {
-        background-color: lighten(#82c43c, 10%);
+        background-color: color.adjust(#82c43c, $lightness: 10%);
       }
     }
 
