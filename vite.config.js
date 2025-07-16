@@ -10,52 +10,32 @@ export default defineConfig({
   base: '/sass_dashboard/',
 
   plugins: [
-    // ViteImageOptimizer({
-    //   png: {
-    //     quality: 86,
-    //   },
-    //   jpeg: {
-    //     quality: 86,
-    //   },
-    //   jpg: {
-    //     quality: 86,
-    //   },
-    //   webp: {
-    //     quality: 86,
-    //   },
-    //   avif: {
-    //     quality: 86,
-    //   },
-    //   // Включаємо генерацію WebP
-    //   includePublic: true,
-    //   ansiColors: true,
-    //   svg: false,
-    // }),
+    // ViteImageOptimizer тимчасово видалено
   ],
   css: {
     postcss: {
       plugins: [
         // PurgeCSS буде запускатися тільки під час збірки
-        ...(process.env.NODE_ENV === 'production'
-          ? [
-              (await import('@fullhuman/postcss-purgecss')).default({
-                content: [
-                  './**/*.html',
-                  './src/**/*.js',
-                  './src/**/*.ts',
-                  './src/**/*.scss',
-                  './src/**/*.sass',
-                ],
-                defaultExtractor: content =>
-                  content.match(/[\w-/:]+(?<!:)/g) || [],
-                safelist: {
-                  standard: [/^active/, /^show/, /^fade/, /^collapse/],
-                  deep: [/modal/, /dropdown/, /tooltip/],
-                  greedy: [/data-bs-/],
-                },
-              }),
-            ]
-          : []),
+        // ...(process.env.NODE_ENV === 'production'
+        //   ? [
+        //       (await import('@fullhuman/postcss-purgecss')).default({
+        //         content: [
+        //           './**/*.html',
+        //           './src/**/*.js',
+        //           './src/**/*.ts',
+        //           './src/**/*.scss',
+        //           './src/**/*.sass',
+        //         ],
+        //         defaultExtractor: content =>
+        //           content.match(/[\w-/:]+(?<!:)/g) || [],
+        //         safelist: {
+        //           standard: [/^active/, /^show/, /^fade/, /^collapse/],
+        //           deep: [/modal/, /dropdown/, /tooltip/],
+        //           greedy: [/data-bs-/],
+        //         },
+        //       }),
+        //     ]
+        //   : []),
       ],
     },
   },
