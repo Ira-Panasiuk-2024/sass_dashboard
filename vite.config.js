@@ -2,41 +2,16 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import glob from 'fast-glob';
 import { fileURLToPath } from 'url';
-// import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   base: '/sass_dashboard/',
 
-  plugins: [
-    // ViteImageOptimizer тимчасово видалено
-  ],
+  plugins: [],
   css: {
     postcss: {
-      plugins: [
-        // PurgeCSS буде запускатися тільки під час збірки
-        // ...(process.env.NODE_ENV === 'production'
-        //   ? [
-        //       (await import('@fullhuman/postcss-purgecss')).default({
-        //         content: [
-        //           './**/*.html',
-        //           './src/**/*.js',
-        //           './src/**/*.ts',
-        //           './src/**/*.scss',
-        //           './src/**/*.sass',
-        //         ],
-        //         defaultExtractor: content =>
-        //           content.match(/[\w-/:]+(?<!:)/g) || [],
-        //         safelist: {
-        //           standard: [/^active/, /^show/, /^fade/, /^collapse/],
-        //           deep: [/modal/, /dropdown/, /tooltip/],
-        //           greedy: [/data-bs-/],
-        //         },
-        //       }),
-        //     ]
-        //   : []),
-      ],
+      plugins: [],
     },
   },
   build: {
